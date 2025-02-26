@@ -3,10 +3,10 @@
 Con un ejemplo como un buscador de productos de un ecommerce, demostraremos una alternativa a Elasticsearch eficiente y rápida en su implementación, con la cual podremos solucionar los siguientes problemas:
 
 ### ➕ Autocompletado
+
 ![gif-autocomplete](https://github.com/user-attachments/assets/c865e5e7-a00b-41f5-884b-39b78279eb81)
 
-
-Al tipear en el buscador del ecommerce, obtendrás sugerencias de lo que puedes estar buscando. Todo esto en tiempo real, realizando solicitudes HTTP a la API.
+> En este buscador un evento onChange captura el value del input para realizar una request a la API. Esto devuelve las sugerencias.
 
 ### ❎ Tolerancia a errores tipográficos (Typo tolerance)
 

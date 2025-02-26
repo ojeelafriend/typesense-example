@@ -1,0 +1,42 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: "GeistMonoVF";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/GeistMonoVF.woff") format("woff");
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "GeistMonoVF", sans-serif;
+  margin: 0;
+  height: 50%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+div,
+span {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

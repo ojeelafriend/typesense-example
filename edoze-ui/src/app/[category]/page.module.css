@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  margin: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  row-gap: 1rem;
+  column-gap: 5rem;
+}
+
+.item {
+  display: grid;
+  width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.info {
+  display: flex;
+  padding: 0.5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+}
+.image {
+  max-width: 100%;
+}

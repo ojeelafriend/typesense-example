@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-self: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+.inputQuery {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+.inputQuery > input {
+  border-radius: 4px;
+  border: transparent;
+  margin-left: 0.5rem;
+  min-width: 400px;
+}
+
+.inputQuery > input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.autocompleteContainer {
+  position: absolute;
+  z-index: 100;
+  margin-top: 168px;
+  min-width: 496px;
+  background-color: white;
+  border-radius: 0px 0px 8px 8px;
+  border-top: 1px solid rgb(255, 242, 0) !important;
+  border: 1px solid rgba(4, 4, 4, 0.063);
+}
+
+.autocompleteOption {
+  display: flex;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+}
+
+.autocompleteOption:hover {
+  background-color: rgba(255, 242, 0, 0.427);
+  cursor: default;
+}
+
+.edozeImage {
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 13pt;
+  height: 78%;
+  margin-top: 5rem;
+  border-top: solid rgb(255, 234, 0) 2px;
+  background-color: rgba(0, 0, 0, 0.874);
+}
+
+.deepFooter {
+  display: flex;
+  height: 10%;
+  border-top: solid rgb(255, 234, 0) 8px;
+  color: white;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.footer > .categories,
+.contactUs {
+  padding: 2rem;
+}
+
+.footer > div > span {
+  text-decoration: underline;
+}
+
+.footer > .categories > ul > li {
+  margin-top: 1vw;
+  list-style-type: circle;
+}
+
+.footer > .categories > ul > li > a {
+  text-decoration: none;
+  color: rgb(255, 234, 0);
+}
+
+.footer > .categories > ul > li > a:hover {
+  text-decoration: none;
+  color: rgba(236, 227, 127, 0.688);
+}
+
+.footer > .contactUs > ul > li {
+  margin-top: 1.5vw;
+}
+
+.network {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+}
+
+.network > svg {
+  cursor: pointer;
+}
+
+.mybrand > a {
+  color: rgba(255, 255, 0, 0.838);
+}
+
+.mybrand > a:hover {
+  color: rgb(240, 246, 78);
+}

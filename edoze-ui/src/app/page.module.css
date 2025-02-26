@@ -1,0 +1,6 @@
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 14pt;
+}

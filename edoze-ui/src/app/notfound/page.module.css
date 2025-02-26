@@ -1,0 +1,54 @@
+.bannerHidden {
+  background-color: rgba(255, 255, 0, 0.608);
+  position: relative;
+  top: -20.5rem;
+  z-index: 200;
+  text-align: center;
+}
+
+.banner {
+  background-color: rgba(255, 255, 0, 0.608);
+  position: relative;
+  top: -13.5rem;
+  z-index: 200;
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+  animation: slideDownAndHide 0.3s ease-out;
+}
+
+@keyframes slideDownAndHide {
+  0% {
+    top: -20.5rem; /* Posición inicial fuera de la vista */
+  }
+  50% {
+    top: -18.5; /* Posición intermedia visible */
+  }
+  100% {
+    top: -13.5rem; /* Posición final más abajo y fuera de la vista */
+  }
+}
+
+.banner > h4 {
+  font-weight: 400;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 4rem;
+  row-gap: 4rem;
+  border: solid 1px rgba(0, 0, 0, 0.156);
+  border-radius: 4px;
+  margin-top: 4rem;
+}
+
+.grid > div > a {
+  color: black;
+}
+
+.grid > div > a > h1 {
+  font-size: 14pt;
+  text-decoration: underline;
+}

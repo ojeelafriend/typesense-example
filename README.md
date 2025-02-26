@@ -9,6 +9,8 @@ Con un ejemplo como un buscador de productos de un ecommerce, demostraremos una 
 > En este buscador un evento onChange captura el value del input para realizar una request a la API. Esto devuelve las sugerencias.
 
 ### ❎ Tolerancia a errores tipográficos (Typo tolerance)
+![gif-typo-tolerance](https://github.com/user-attachments/assets/f6dc0da7-a082-46d0-9958-b0d4febeb4bb)
+
 
 ### 🗒️ Sinónimos
 

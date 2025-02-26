@@ -13,7 +13,8 @@ Con un ejemplo como un buscador de productos de un ecommerce, demostraremos una 
 
 
 ### 🗒️ Sinónimos
-![gif-synonyms](https://github.com/user-attachments/assets/7cac55bf-a609-48f9-9f08-4489126d6854)
+![gif-synonyms](https://github.com/user-attachments/assets/1c507509-1a20-4f04-a240-ce38fa86cec8)
+
 
 
 

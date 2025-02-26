@@ -13,6 +13,9 @@ Con un ejemplo como un buscador de productos de un ecommerce, demostraremos una 
 
 
 ### 🗒️ Sinónimos
+![gif-synonyms](https://github.com/user-attachments/assets/7cac55bf-a609-48f9-9f08-4489126d6854)
+
+
 
 [Más sobre las bondades de typesense](https://typesense.org/docs/overview/features.html).
 

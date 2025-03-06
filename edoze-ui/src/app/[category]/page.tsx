@@ -1,6 +1,4 @@
 import { searchProductsByCategory } from "@/services/search";
-import styles from "./page.module.css";
-import Image from "next/image";
 import { Grid } from "@/ui/Product/Grid";
 
 interface Props {

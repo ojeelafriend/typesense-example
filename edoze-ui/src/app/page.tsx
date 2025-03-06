@@ -5,17 +5,16 @@ import { Grid } from "@/ui/Product/Grid";
 import styles from "./page.module.css";
 
 interface Props {
-  params: Promise<{ [key: string]: string }>;
   searchParams: Promise<{ [key: string]: string | string[] }>;
 }
 
-export default async function Home({ params, searchParams }: Props) {
+export default async function Home({ searchParams }: Props) {
   const { page } = await searchParams;
   const { found, products } = await searchAllProducts({
     page: page ? `${page}` : "1",
   });
 
-  let parsedPage = typeof page === "string" ? parseInt(`${page}`) : 1;
+  const parsedPage = typeof page === "string" ? parseInt(`${page}`) : 1;
 
   return (
     <>

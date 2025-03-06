@@ -6,14 +6,12 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import { FaSearch } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { FaAmazon } from "react-icons/fa";
 
 import { useRouter } from "next/navigation";
 import "./globals.css";
 import Link from "next/link";
-import { GoRocket } from "react-icons/go";
 
 interface Props {
   children: React.ReactNode;

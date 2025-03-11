@@ -1,43 +1,35 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.683);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(10px);
+}
 .container {
-  display: flex;
-  flex-flow: column;
-  justify-self: center;
-  margin-top: 2rem;
-  padding: 0.5rem;
+  display: grid;
+  justify-content: center;
 }
 
-.inputQuery {
-  display: flex;
-  align-items: center;
-  border-radius: 2px;
-  background-color: white;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid rgba(0, 0, 0, 0.171);
-  padding: 0.5rem;
-  margin-top: 2rem;
-}
-
-.inputQuery > input {
-  border-radius: 4px;
-  border: transparent;
-  margin-left: 0.5rem;
-  min-width: 400px;
-}
-
-.inputQuery > input:focus-visible {
-  border: none;
-  outline: none;
+.container > nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 20% minmax(320px, 500px) 15%;
 }
 
 .autocompleteContainer {
   position: absolute;
-  z-index: 100;
-  margin-top: 168px;
-  min-width: 496px;
-  background-color: white;
-  border-radius: 0px 0px 8px 8px;
-  border-top: 1px solid rgb(255, 242, 0) !important;
-  border: 1px solid rgba(4, 4, 4, 0.063);
+  top: 32px;
+  left: -1px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.211);
+  border-top: transparent;
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 .autocompleteOption {
@@ -52,30 +44,98 @@
   cursor: default;
 }
 
+.logotype > a {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.containerInput {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, 0.256);
+}
+
+.inputQuery {
+  display: grid;
+  grid-template-columns: 10% 80%;
+}
+
+.inputQuery > svg {
+  color: rgba(0, 0, 0, 0.387);
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  align-self: center;
+}
+
+.inputQuery > input {
+  width: 100%;
+  border: none;
+}
+
+.inputQuery > input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.searchButton {
+  position: relative;
+  z-index: 1000;
+  transition: background-color 0.5ms ease;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #fecc03;
+}
+
+.searchButton:hover {
+  background-color: #e1b400;
+  cursor: pointer;
+}
+
 .edozeImage {
   cursor: pointer;
 }
 
+.main {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
 .footer {
-  display: flex;
-  justify-content: space-evenly;
-  color: rgba(255, 255, 255, 0.87);
-  font-size: 13pt;
-  height: 78%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20%, 1fr));
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  color: rgba(0, 0, 0, 0.816);
+  font-size: 14px;
+  height: 100%;
   margin-top: 5rem;
-  border-top: solid rgb(255, 234, 0) 2px;
-  background-color: rgba(0, 0, 0, 0.874);
+  background-color: #fbfafa;
+}
+
+.explainBrand {
+  display: flex;
+  grid-column: 1/3;
+}
+
+.explainBrand > p {
+  padding: 1rem;
+}
+.explainBrand > h1 {
+  font-size: 50px;
 }
 
 .deepFooter {
   display: flex;
   height: 10%;
-  border-top: solid rgb(255, 234, 0) 8px;
-  color: white;
+  border-top: solid rgba(0, 0, 0, 0.101) 1px;
+  color: rgb(0, 0, 0);
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #fbfafa;
 }
 
 .footer > .categories,
@@ -85,21 +145,21 @@
 
 .footer > div > span {
   text-decoration: underline;
+  font-size: 16px;
 }
 
 .footer > .categories > ul > li {
   margin-top: 1vw;
-  list-style-type: circle;
 }
 
 .footer > .categories > ul > li > a {
   text-decoration: none;
-  color: rgb(255, 234, 0);
+  color: rgb(0, 0, 0);
 }
 
 .footer > .categories > ul > li > a:hover {
   text-decoration: none;
-  color: rgba(236, 227, 127, 0.688);
+  color: rgba(120, 120, 120, 0.688);
 }
 
 .footer > .contactUs > ul > li {
@@ -115,10 +175,17 @@
   cursor: pointer;
 }
 
-.mybrand > a {
-  color: rgba(255, 255, 0, 0.838);
+.logotype > a::after {
+  content: "edoze";
 }
 
-.mybrand > a:hover {
-  color: rgb(240, 246, 78);
+@media (max-width: 600px) {
+  .container > nav {
+    display: grid;
+    grid-template-columns: minmax(320px, 500px) 15%;
+  }
+
+  .container .logotype {
+    display: none;
+  }
 }

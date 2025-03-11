@@ -2,6 +2,7 @@
   display: grid;
   margin: 5rem;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: center;
   row-gap: 1rem;
   column-gap: 5rem;
 }
@@ -28,4 +29,16 @@
 }
 .image {
   max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .container > nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: center;
+  }
+
+  .container .logotype {
+    display: none;
+  }
 }

@@ -54,7 +54,7 @@ function Layout({ children }: Props) {
           <div className={styles.container}>
             <nav>
               <div className={styles.logotype}>
-                <a href="/"></a>
+                <Link href="/">{""}</Link>
               </div>
               <div className={styles.containerInput}>
                 <div className={styles.inputQuery}>

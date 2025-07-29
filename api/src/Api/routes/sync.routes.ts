@@ -76,6 +76,37 @@ router.post("/synonyms", async (request: Request, response: Response) => {
 
 router.post("", async (request: Request, response: Response) => {
   try {
+    await typesense.collections().create({
+      name: "products",
+      fields: [
+        {
+          name: "title",
+          type: "string",
+          facet: true,
+        },
+        {
+          name: "description",
+          type: "string",
+          facet: true,
+        },
+        {
+          name: "price",
+          type: "string",
+          facet: true,
+        },
+        {
+          name: "category",
+          type: "string",
+          facet: true,
+        },
+        {
+          name: "image",
+          type: "string",
+          facet: false,
+        },
+      ],
+    });
+
     const { category } = request.query;
     const result = await fetch(
       `https://dummyjson.com/products/category/${category}`
@@ -103,5 +134,48 @@ router.post("", async (request: Request, response: Response) => {
     return response.status(200).json({ ok: false, error: `Internal Error` });
   }
 });
+
+router.post(
+  "/createCollection",
+  async (request: Request, response: Response) => {
+    try {
+      const schema = await typesense.collections().create({
+        name: "products",
+        fields: [
+          {
+            name: "title",
+            type: "string",
+            facet: true,
+          },
+          {
+            name: "description",
+            type: "string",
+            facet: true,
+          },
+          {
+            name: "price",
+            type: "string",
+            facet: true,
+          },
+          {
+            name: "category",
+            type: "string",
+            facet: true,
+          },
+          {
+            name: "image",
+            type: "string",
+            facet: false,
+          },
+        ],
+      });
+
+      return response.status(200).json({ ok: true, schema });
+    } catch (error) {
+      console.log(error);
+      return response.status(200).json({ ok: false, error: `Internal Error` });
+    }
+  }
+);
 
 export default router;
